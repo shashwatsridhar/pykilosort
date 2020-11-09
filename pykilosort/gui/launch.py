@@ -2,10 +2,14 @@ import sys
 
 import pyqtgraph as pg
 from pykilosort.gui import DarkPalette, KiloSortGUI
-from PyQt5 import QtWidgets
+from PyQt5 import QtCore, QtWidgets
 
 
 def launcher():
+    if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
+        QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+    if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
+        QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
     kilosort_application = QtWidgets.QApplication(sys.argv)
     kilosort_application.setStyle("Fusion")
     kilosort_application.setPalette(DarkPalette())
