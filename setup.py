@@ -43,7 +43,6 @@ install_requires = [
     "tqdm",
     "click",
     "mock",
-    "cupy",
     "numpy",
     "numba",
     "scipy",
