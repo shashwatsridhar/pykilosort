@@ -34,7 +34,8 @@ If you don't already have conda installed you can follow the guide [here](https:
 ```shell
 conda create -n pyks2 python=3
 conda activate pyks2
-pip install pykilosort
+conda install pykilosort
+pip install spikeextractors phy==2.0b1
 ```
 
 #### Venv
